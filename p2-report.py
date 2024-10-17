@@ -62,6 +62,7 @@ mauja_id = [
 
 all_p2 = []
 
+print("P2 Report (public portal)\n==================")
 
 for x in mauja_id:
     cookies = {
@@ -127,4 +128,4 @@ for x in mauja_id:
         print(f"Request failed with status code: {response.status_code}")
 
 print("---- Mauja Count: ", len(all_p2), " ---")
-print("Total: ", sum(all_p2))
+print("Total P2: ", sum(all_p2))
