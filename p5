@@ -12,7 +12,7 @@ for item in "${mauja_id[@]}"; do
     echo $result
 
     number=$(echo "$result" | cut -d',' -f2)
-    echo $number
+    #echo $number
      total_sum=$((total_sum + number))
 done
 echo -e "=================\nTotal P5: $total_sum"
