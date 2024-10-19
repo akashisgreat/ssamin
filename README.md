@@ -1,6 +1,12 @@
+# Installation
 ```
-pkg update && pkg upgrade -y && pkg install git python neovim -y
+pkg update && pkg upgrade -y && pkg install git python neovim pup -y
 git clone https://github.com/akashisgreat/ssamin.git
 pip install beautifulsoup4 requests
-python ssamin/p2-report.py
+```
+
+# Reports
+```
+./ssamin/p2
+./ssamin/p5
 ```
