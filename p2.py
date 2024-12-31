@@ -129,3 +129,5 @@ for x in mauja_id:
 
 print("---- Mauja Count: ", len(all_p2), " ---")
 print("Total P2: ", sum(all_p2))
+
+input("Press any key to exit.)
