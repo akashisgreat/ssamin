@@ -120,7 +120,7 @@ for x in mauja_id:
         
         mauja_name = mauja_name.replace(" मौजा/ग्राम (थाना न०/RT Num):-", "")
         
-        print(mauja_name, ",", p2_no.text)
+        print(mauja_name, "\t\t", p2_no.text)
 
         all_p2.append(int(p2_no.text))
 
