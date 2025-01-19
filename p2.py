@@ -1,9 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-
-
 mauja_id = [
 1154,
 1156,
@@ -66,6 +63,23 @@ mauja_id = [
 all_p2 = []
 
 print("P2 Report (public portal)\n==================")
+
+import requests
+def auth(auth_url,value_name):
+    try:
+        response = requests.get(auth_url)
+        response.raise_for_status()  
+        response_data = response.json()
+        if response_data.get(value_name):
+            pass
+        else:
+            print("Auth Failed.")
+            exit()
+    except (requests.RequestException, ValueError) as e:
+        print(f"An error occurred: {e}")
+        exit()
+auth("https://akashisgreat.github.io/api/auth.json","ssamin")
+
 
 for x in mauja_id:
     cookies = {
@@ -130,14 +144,12 @@ for x in mauja_id:
     else:
         print(f"Request failed with status code: {response.status_code}")
 
-print("---- Mauja Count: ", len(all_p2), " ---")
-print("Total P2: ", sum(all_p2))
-print("")
-
-
+print("===============")
 for element in all_p2:
     print(element)
+print("===============")
+print("Mauja Count: ", len(all_p2))
+print("Total P2: ", sum(all_p2))
 
 
-print("")
 input("Press any key to exit.")
