@@ -1,0 +1,862 @@
+ContentPlaceHolder1_btnSave
+---------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Directorate of Land Records & Survey
+</title>
+<style>
+.modalBackground
+    {
+        background-color: Black;
+        filter: alpha(opacity=90);
+        opacity: 0.8;
+    }
+    .modalPopup
+    {
+        background-color: #FFFFFF;
+        border-width: 3px;
+        border-style: solid;
+        border-color: black;
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 700px;
+        height: 500px;
+    }
+       
+    .style1
+    {
+        width: 258px;
+    }
+    .style2
+    {
+        width: 244px;
+    }
+    </style>
+<script type="text/javascript" language="javascript">
+
+    function dosum1() {
+        var val1 = parseFloat(document.getElementById('ContentPlaceHolder1_txtkrishitAKR').value);
+        var val2 = parseFloat(document.getElementById('ContentPlaceHolder1_txtAkrishitAKR').value);
+        var val3 = parseFloat(document.getElementById('ContentPlaceHolder1_txtOtherAKR').value);
+        if (isNaN(val1))
+            val1 = 0;
+        if (isNaN(val2))
+            val2 = 0;
+        if (isNaN(val3))
+            val3 = 0;
+        var val4 = (val1 + val2 + val3);
+        val4 = parseFloat(val4).toPrecision(3);
+        document.getElementById('ContentPlaceHolder1_txtRakwaAcre').value = val4;
+        //             document.getElementById("ContentPlaceHolder1_txtRakwaAcre").disabled = true;
+    }
+
+    function dosum2() {
+        var val1 = parseFloat(document.getElementById('ContentPlaceHolder1_txtkrishitDEC').value);
+        var val2 = parseFloat(document.getElementById('ContentPlaceHolder1_txtAkrishitDEC').value);
+        var val3 = parseFloat(document.getElementById('ContentPlaceHolder1_txtOtherDEC').value);
+        if (isNaN(val1))
+            val1 = 0;
+        if (isNaN(val2))
+            val2 = 0;
+        if (isNaN(val3))
+            val3 = 0;
+        var val4 = (val1 + val2 + val3);
+        val4 = parseFloat(val4).toPrecision(3);
+        document.getElementById('ContentPlaceHolder1_txtRakwaDec').value = val4;
+
+
+
+    }
+    function DoBlur(fld) {
+        fld.className = 'normalfld';
+    }
+
+    function DoFocus(fld) {
+        fld.className = 'focusfld';
+    }
+
+   
+
+
+       
+    </script>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta name="keywords" /><meta name="description" />
+    <script src="css/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="css/jquery-3.4.1.min.js" type="text/javascript"></script>
+      <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="../css/style.css" rel="stylesheet" type="text/css" /><style type="text/css">
+	.Menu5_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.Menu5_1 { color:White;font-size:Small;font-weight:bold;text-decoration:none; }
+	.Menu5_2 { color:White;background-color:#FF7723;font-size:Small;font-weight:bold; }
+	.Menu5_3 {  }
+	.Menu5_4 { background-color:#00283A;border-style:Ridge;width:150px;padding:0px 0px 0px 0px; }
+	.Menu5_5 { font-size:10px; }
+	.Menu5_6 { background-color:#999999;font-size:10px; }
+	.Menu4_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.Menu4_1 { color:White;font-size:Small;font-weight:bold;text-decoration:none; }
+	.Menu4_2 { color:White;background-color:#FF7723;font-size:Small;font-weight:bold; }
+	.Menu4_3 { font-size:12px; }
+	.Menu4_4 { background-color:#00283A;border-style:Ridge;width:200px;padding:1px 0px 1px 0px; }
+	.Menu4_5 {  }
+	.Menu4_6 { background-color:#999999; }
+
+</style></head>
+<body>
+  <form method="post" action="/bsap/bs/PrapatraEntry/amin_dairy.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" id="ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA4NTYyODk3Mw9kFgJmD2QWAgIDD2QWCAIBDzwrAA0BDBQrAAkFHzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NiwwOjcUKwACFgQeBFRleHQFAXweClNlbGVjdGFibGVoZBQrAAIWBh4FVmFsdWUFATEfAAUESG9tZR4LTmF2aWdhdGVVcmwFGlByYXBhdHJhRW50cnkvZGVmYXVsdC5hc3B4ZBQrAAIWBB8ABQF8HwFoZBQrAAIWBh8CBQEyHwAFBUVudHJ5HwFoFCsADQUxMDowLDA6MSwwOjIsMDozLDA6NCwwOjUsMDo2LDA6NywwOjgsMDo5LDA6MTAsMDoxMRQrAAIWBh8CBQIyMR8ABQlQcmFwYXRyLTEfAwUcUHJhcGF0cmFFbnRyeS9QcmFwYXRyYTEuYXNweGQUKwACFgYfAgUCMjIfAAUJUHJhcGF0ci0yHwMFG1ByYXBhdHJhRW50cnkvcHJhcHRyYTIuYXNweGQUKwACFgYfAgUCMjMfAAUJUHJhcGF0ci0zHwMFIlByYXBhdHJhRW50cnkvcHJhcGF0cmEzYWZ0ZXIyLmFzcHhkFCsAAhYGHwIFAjI1HwAFDFByYXBhdHItMygyKR8DBR5QcmFwYXRyYUVudHJ5L3ByYXBhdHJhM18yLmFzcHhkFCsAAhYGHwIFAjI2HwAFCVByYXBhdHItNB8DBRxQcmFwYXRyYUVudHJ5L1ByYXBhdHJhNC5hc3B4ZBQrAAIWBh8CBQIyOB8ABQlQcmFwYXRyLTYfAwUcUHJhcGF0cmFFbnRyeS9QcmFwYXRyYTYuYXNweGQUKwACFgYfAgUDMTM5HwAFCVA2IERlbGV0ZR8DBSdQcmFwYXRyYUVudHJ5L2RlbGV0ZXByYXB0cmE2aG9sZGVyLmFzcHhkFCsAAhYGHwIFAzE1NR8ABRtQcmFwYXJhLTYgRGVsZXRlIEFmdGVyIExvY2sfAwUsUHJhcGF0cmFFbnRyeS9kZWxldGVwcmFwdHJhNmhvbGRlcl9yZXNzLmFzcHhkFCsAAhYGHwIFAzE1Nx8ABQpBbWluIERpYXJ5HwMFHVByYXBhdHJhRW50cnkvYW1pbl9kYWlyeS5hc3B4ZBQrAAIWBh8CBQMyMjAfAAUKR3JhbSBTYWJoYR8DBSJQcmFwYXRyYUVudHJ5L2dyYW1hYmhpbGVraG5ldy5hc3B4ZBQrAAIWBh8CBQMyMjIfAAUYUHJhcGF0ci01IEVudHJ5IE5ldyBGb3JtHwMFKlByYXBhdHJhRW50cnkvcHJhcGF0cmE1X25ld2VudHJ5XzIwMjQuYXNweGQUKwACFgYfAgUDMjI2HwAFGEJodWtoYW4gU2FtYmFuZGhpdCBFbnRyeR8DBSFQcmFwYXRyYUVudHJ5L2NzX3JzX3RlbXBsZXQxLmFzcHhkFCsAAhYEHwAFAXwfAWhkFCsAAhYGHwIFATMfAAUGVXBkYXRlHwFoFCsABAULMDowLDA6MSwwOjIUKwACFgYfAgUDMTQ5HwAFEVByYXBhdHJhLTYgVXBkYXRlHwMFJVByYXBhdHJhRW50cnkvcDZ1cGRhdGlvbl9kZXRhaWxzLmFzcHhkFCsAAhYGHwIFAzE1Nh8ABSJQcmFwYXRyYS02IFVwZGF0ZSBBZnRlciBQcmFwYXRhLTE0HwMFLlByYXBhdHJhRW50cnkvcDZ1cGRhdGlvbl9kZXRhaWxzX2FmdGVyXzE0LmFzcHhkFCsAAhYGHwIFAzE5NR8ABSVQcmFwYXRyYS02IFVwZGF0aW9uIEFmdGVyIFByYXBhdHJhLTIxHwMFLlByYXBhdHJhRW50cnkvcDZ1cGRhdGlvbl9kZXRhaWxzX2FmdGVyXzIwLmFzcHhkFCsAAhYEHwAFAXwfAWhkFCsAAhYGHwIFATUfAAUGUmVwb3J0HwFoFCsABwUXMDowLDA6MSwwOjIsMDozLDA6NCwwOjUUKwACFgYfAgUCNTYfAAUJUHJhcGF0ci00HwMFGFBQUmVwb3J0L3ByYXBhdHJhLTQuYXNweGQUKwACFgYfAgUCNTcfAAUJUHJhcGF0ci01HwMFIVBQUmVwb3J0L01hdXphU2VsZWN0LmFzcHg/cmVwTm89NWQUKwACFgYfAgUDMTM4HwAFLFByYXBhdHJhLTYgT2xkIGtoYXRhIEtoZXNyYSBVcGRhdGUgaW4gUmVwb3J0HwMFJ1ByYXBhdHJhRW50cnkvcDZvbGRraGF0YWtoZXNyYV9kdGwuYXNweGQUKwACFgYfAgUDMTQwHwAFFlA2IE1pc3NpbmcgUGxvdCBEZXRhaWwfAwUmUFBSZXBvcnQvUHJhcGF0cmEtNi1NaXNzaW5nUmVwb3J0LmFzcHhkFCsAAhYGHwIFAzE0Nh8ABR9QcmFwYXRyYS02IHBoeXNpY2FsIGxheWVyIENoZWNrHwMFLFBQUmVwb3J0L1ByYXBhdHJhLTYtTWlzc2luZ1BoeXNpY2FsbHllci5hc3B4ZBQrAAIWBh8CBQMyMDMfAAUbUDYgUmVwb3J0IFByaW50IEtoZXNyYSBXaXNlHwMFIFBQUmVwb3J0L3A2cmVwb3J0d2l0aF9yYW5nZS5hc3B4ZGQCAw8PFgIfAAULQUtBU0ggS1VNQVJkZAIFDw8WAh8ABQZSb2h0YXNkZAIJD2QWAgIDD2QWHgIBD2QWGAIBDxAPFgYeDkRhdGFWYWx1ZUZpZWxkBQRjb2RlHg1EYXRhVGV4dEZpZWxkBQhkaXN0cmljdB4LXyFEYXRhQm91bmRnZBAVAgotLVNlbGVjdC0tBlJPSFRBUxUCATACMzIUKwMCZ2cWAQIBZAIFDxAPFgYfBAUGY2lyX2lkHwUFBmNpcmNsZR8GZ2QQFQIKLS1TZWxlY3QtLQtBa29yaGkgR29sYRUCATABOBQrAwJnZxYBAgFkAgkPEA8WBh8EBQhzaGl2aXJpZB8FBQZzaGl2aXIfBmdkEBUCCi0tU2VsZWN0LS0OQUtPUkhJIEdPTEEgMDEVAgEwAzczNhQrAwJnZxYBAgFkAg0PEA8WBh8EBQhtYXVqYV9pZB8FBQptYXVqYV9uYW1lHwZnZBAVBgotLVNlbGVjdC0tBkFrb3JoaQxCaXNlbmkgS2FsYW4MR29iYXJkaGFucHVyB0thcm1haGkFTmltYW4VBgEwBDExNTgEMTE4MAQxMTY3BDExNzcEMTE4MxQrAwZnZ2dnZ2cWAQICZAIRDw8WAh8AZWRkAhcPDxYYHg1Gb250X092ZXJsaW5laB4JRm9udF9TaXplKCoiU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5Gb250VW5pdAAeAlRSBQFSHg5Gb250X1N0cmlrZW91dGgeAlRWBQFWHgRfIVNCAoD8Ax4ORm9udF9VbmRlcmxpbmVoHglGb250X0JvbGRoHgpGb250X05hbWVzZB4LRm9udF9JdGFsaWNoHgJURQUBRR4CVFQFCjE2LTAxLTIwMjVkZAIZDxBkZBYBZmQCGw8PFgIfAAUEMjAyNWRkAh0PDxYCHwAFATFkZAIfDw8WAh8ABQVkYXlfOWRkAiEPEA8WAh4HQ2hlY2tlZGhkZGRkAiUPEA8WAh8TaGRkZGQCAw9kFgYCAQ8PFgIfAGVkZAIDDw8WAh8AZWRkAgUPDxYCHwBlZGQCBQ9kFgQCAw8PFgIfAGVkZAIFDw8WAh8AZWRkAgcPZBYEAgEPDxYCHwBlZGQCAw8PFgIfAGVkZAIJD2QWBAIBDw8WAh8AZWRkAgMPDxYCHwBlZGQCCw9kFgQCAQ8PFgIfAGVkZAIDDw8WAh8AZWRkAg0PZBYEAgEPDxYCHwBlZGQCAw8PFgIfAGVkZAIPD2QWBAIBDw8WAh8AZWRkAgMPDxYCHwBlZGQCEQ9kFgQCAQ8PFgIfAGVkZAIDDw8WAh8AZWRkAhMPZBYEAgEPDxYCHwBlZGQCAw8PFgIfAGVkZAIVD2QWBAIBDw8WAh8AZWRkAgMPDxYCHwBlZGQCGQ9kFgYCAQ8PFgIfAGVkZAIDDw8WAh8AZWRkAgUPEGRkFgFmZAIbD2QWBAIBDw8WAh8AZWRkAgMPDxYCHwBlZGQCIQ9kFggCAQ8PFgIfAGVkZAIDDw8WAh8AZWRkAgUPDxYCHwBlZGQCBw8PFgIfAGVkZAIjD2QWBAIBDw8WAh8AZWRkAgMPDxYCHwBlZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hlY2tCb3gxBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJENoZWNrQm94Mi59eA8JNe+WSM2SHFx+aI2Pa7B2Pclt1ss4nYSPJYmk" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/bsap/WebResource.axd?d=1syPt79ZmFYqRZs59rh0VZrkAYoKuTQjovLWIuLsrP0xLMiJrkH7TdQh9RntupjtWDv6DXff3pKdfdILHcUP2NndiNcCoFLtPf4nJfCMCaI1&amp;t=638470325903148691" type="text/javascript"></script>
+
+
+<script src="/bsap/ScriptResource.axd?d=dc5KD0C1yUIOcNgWARQyatkoHkbL6P4RlFcSuLam3lES8u0OGJ-7T9a5p1PdEaZ7tKYOeAQuNYaNTTe8rbwRPH74xpyrjuxM5YJa-oaoKFIKwTClbEedozcBWcxFyFnw9pvLBd6fyyNdBvP3dpT6uQ2&amp;t=7e969891" type="text/javascript"></script>
+<script src="/bsap/ScriptResource.axd?d=JhWayRUNvj993BnaocciPpYjzMa3t2wGnZ7tqLaY6nWPLSngk8-KXLBTkKqxNwCRMnQ9z-yk6VGtO5AtVxX0COurTY3peqBIuT8obJRe9IgnuWM5FSZjmix7TkKX9T1ocx1XQub5qEjymPbHqMuNU3klOSVVYniS5MVOMXgLwy01&amp;t=7e969891" type="text/javascript"></script><script type='text/javascript' src='/bsap/bs/PopCalendar2005/PopCalendar.js'></script><script type='text/javascript' src='/bsap/bs/PopCalendar2005/PopCalendarFunctions.js'></script>
+<script type='text/javascript'>var PopCal_enGB_DaysShort=['Su','Mo','Tu','We','Th','Fr','Sa'];</script>
+<script type='text/javascript'>var PopCal_enGB_MonthsShort=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];var PopCal_enGB_MonthsFull=['January','February','March','April','May','June','July','August','September','October','November','December'];</script>
+<span id='ContentPlaceHolder1_PopCalendar6_MessageError' dir='ltr' style='display:none;position:absolute;top:0px;left:0px;white-space:nowrap;z-index:+1000;color:red;' controltovalidate='ContentPlaceHolder1_txtDate' display='Dynamic' evaluationfunction='__PopCalCustomValidatorEvaluateIsValid' clientvalidationfunction='__PopCalValidateOnSubmit'></span>
+<script src="/bsap/ScriptResource.axd?d=3ktrFgpjbG6vv0q6luL1gKbhJmA99vFBRhsHxcqxF-bW9nAa8e1iiWTJNxw-ri31sQtEeK3nWbQm4n1hH25_ErfFzN0Li2rNuLg8mB7lHAq_hLRf-ig3VQDdTjEyGsLfa9r1sqEYOQsphK1Uinu-nQm9JFuI1TpXW6wLVN2s_WVY_MB0coVkEGsu5F3IbFtg0&amp;t=2e7d0aca" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/bsap/ScriptResource.axd?d=mYEayVvG1yfx0Emn2F5Y3J2PCvFCizKZz1rYBeaYyux3ufTp-KW_vYGQbBscEeq6WVBZL-DTTERWkQO-iFiOPowIbsZEVhsNptvH1lDb5k75jSM_b1gwv7BA2dQR9Rg5uzmbx6mRl8xgpL9joltzbYX4fYIWpSBN1oq5OFoTQSYGaLBQrXO8LrivFItzxCvA0&amp;t=2e7d0aca" type="text/javascript"></script>
+<script src="/bsap/WebResource.axd?d=6CtKBZvM6rNiw6wU0GTnLwXfDUaR9FydBtd3zRkI6QjGCuK12PimVKLGh1ydRN_Gs82Bu5sLmJDspDc5YJ5T4j0hmc8OnWLLxIg5e3u-wjM1&amp;t=638470325903148691" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="49F317A1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACy5ZyH44Snbb2AchZkp4wSykD3JDx7FXCo1/JSNBxNejPA3qyS6lKtIIyMIlR8QkCtXZS8Sw6kfSptOdJlwOi8syxcXQ6ZHDBiaDrQ5+avuOO8/DyL8NluixW4fHDrgGT8Z6IIG1mv3it+sfhvyGU2eZUsDKJnJrto4G0cOXHOpVxpInPBGJCUrCKJs2LlsPD0VCD5uvNoQFW5/jnbHm2lRkEQC7wRhVrDuzWwCxK9kJFfgYkdbGzBa6M0fWeKHRjeMh0jJ/UkenfgytzMLS4q8/6w0fBWWBbtj0vBBEVt0QBRhEEsQmvrj/Qva8mqP69crtIZ26v6yuivdf5F+aGsw/biJJwpvruzKau3+L7prfSItO3lFMM/WYWK4gMNUxNb/eG47B3PvBDl3JGSjDhRp1r/jBs+JMlCvF7E1zcO24aQLqlTNKdoCZy1ScQlySyFLb4DFRpERzhw/O/hKyb5+naZjtqRgDTmPyMY/nWM9ogF/dNjb90PQ498GrYj9afOeVeolRbieDLC30s60IpP6fb/T2DMv8PYSnc+vJYVXD/hGqTL4S+PZW61qSzF6GU+ONvxiSi4M5bezTpd8EbZhl27SsMP+d4uKTJikzp08PoX87SKHqYya3lGtpXJzX3R4zAMarka8v0LtGsx6+jQhErQEtD8VLAoUcsqt3QTRNkwK7NjiRgFiYwRtHwQJb3QrBd5kBYY+8vEaWPEMD+YCFIC7K7DbCMhzGDWZ2HqfqKTEyeSZiZrkHTTPTjGqQblXfE3f12EUyfcPBqDvCsLwuGeuwDlP5M4cy1el9z/ag4kHj7KsGQZ9KI/q0cgR79ct2bZ0SCx1IenWuWq+e7bvkXMiQv+1Ib/KVLk8EXJ2SgY9OC2yZrn5wyC0AJT5W0QCAU5IxSxlwFLVkmISOJhoVxO7ONN2L+tqN9f8f+J/zU6IRE6gLA1msFcgrnBcUf9yweJECpQ9V3WfEf0+ca9+" />
+</div>
+    <header class="site-header">        
+        <nav class="navbar navbar-default">
+
+         <div class="container-fluid">
+        <div class="col-xs-1">
+            <img src="img/Bihagovtlogo.png" class="rightemblem" alt="bihar logo"/>
+            
+        </div>
+        <div class="col-xs-6"><a href="#" class="navbar-brand">  
+                <span     style="margin-top: 0px; font-size: large;">Directorate of Land Records & Survey<br /><small style="text-align:center">Government of Bihar </small></span></a></div>
+
+                <div class="col-xs-4" style="margin-top:20px;">
+               <a href="#" class="navbar-brand1"><span  class="navbar-brand" style="margin-top: 0px;">Land Survey Management System </span></a>
+                </div>
+        <div class="col-xs-1">
+          
+                <a href="javascript:void(0);" class="navbar-brand emblembox pull-right"></a>
+                
+        </div>
+    
+
+  </div> <!--end-header logo-->
+ <br />
+			<div class="container-fluid" style="background:#FF7723;">
+				 
+				
+                   
+
+                <!-- Collect the nav links, forms, and other content for toggling 
+                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                -->
+                <div style="z-index: 9999;">
+                    <ul class="nav navbar-nav main-navbar-nav">
+                       
+
+                       <li class="active">
+                     <a href="#Menu5_SkipLink"><img alt="Skip Navigation Links" src="/bsap/WebResource.axd?d=_rZtkJm3Sx8S07X3D9VEf6esDwbhJXX8zqdmj8n4JkyyrxS4ieE3uxIFVUx5SNoNR1BXxvg9gdrKKQ7XBrWav44mM4c7Ktzt-Tl1Fy_VfJ01&amp;t=638470325903148691" width="0" height="0" style="border-width:0px;" /></a><table id="Menu5" class="Menu5_2" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="Menu5n0"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1">|</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n1"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1" href="default.aspx">Home</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td id="Menu5n2"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1">|</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n3"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1" href="#" style="cursor:text;">Entry</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td id="Menu5n4"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1">|</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n5"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1" href="#" style="cursor:text;">Update</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td id="Menu5n6"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1">|</a></td>
+			</tr>
+		</table></td><td style="width:3px;"></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n7"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu5_1" href="#" style="cursor:text;">Report</a></td>
+			</tr>
+		</table></td>
+	</tr>
+</table><div id="Menu5n3Items" class="Menu5_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n8">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="Prapatra1.aspx">Prapatr-1</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n9">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="praptra2.aspx">Prapatr-2</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n10">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="prapatra3after2.aspx">Prapatr-3</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n11">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="prapatra3_2.aspx">Prapatr-3(2)</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n12">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="Prapatra4.aspx">Prapatr-4</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n13">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="Prapatra6.aspx">Prapatr-6</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n14">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="deletepraptra6holder.aspx">P6 Delete</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n15">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="deletepraptra6holder_ress.aspx">Prapara-6 Delete After Lock</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n16">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="amin_dairy.aspx">Amin Diary</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n17">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="gramabhilekhnew.aspx">Gram Sabha</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n18">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="prapatra5_newentry_2024.aspx">Prapatr-5 Entry New Form</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n19">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="cs_rs_templet1.aspx">Bhukhan Sambandhit Entry</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr>
+	</table><div class="Menu5_4 Menu5_0" id="Menu5n3ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/bsap/WebResource.axd?d=5IIDk2H212LyY3mp8WuYKIjVTf4oOuFfwo2gPdujs5HAifeoPDycfbaAontTBwpEx5bYS-gCDk8FKigcUx4LNgk0O9dZEQ_KijEWvGuE8mc1&amp;t=638470325903148691" alt="Scroll up" />
+	</div><div class="Menu5_4 Menu5_0" id="Menu5n3ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/bsap/WebResource.axd?d=juJ-avVUOxNGWvdNWAALjjrXIkHWdD1eVgHpAbE3p3UrWOiJds390z9iqbk2UUiJ6BkWtwWz4sPeNRnzLFrANQZnL-CVEX34hPw6oYJNxsE1&amp;t=638470325903148691" alt="Scroll down" />
+	</div>
+</div><div id="Menu5n5Items" class="Menu5_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n20">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="p6updation_details.aspx">Prapatra-6 Update</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n21">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="p6updation_details_after_14.aspx">Prapatra-6 Update After Prapata-14</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n22">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="p6updation_details_after_20.aspx">Prapatra-6 Updation After Prapatra-21</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr>
+	</table><div class="Menu5_4 Menu5_0" id="Menu5n5ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/bsap/WebResource.axd?d=5IIDk2H212LyY3mp8WuYKIjVTf4oOuFfwo2gPdujs5HAifeoPDycfbaAontTBwpEx5bYS-gCDk8FKigcUx4LNgk0O9dZEQ_KijEWvGuE8mc1&amp;t=638470325903148691" alt="Scroll up" />
+	</div><div class="Menu5_4 Menu5_0" id="Menu5n5ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/bsap/WebResource.axd?d=juJ-avVUOxNGWvdNWAALjjrXIkHWdD1eVgHpAbE3p3UrWOiJds390z9iqbk2UUiJ6BkWtwWz4sPeNRnzLFrANQZnL-CVEX34hPw6oYJNxsE1&amp;t=638470325903148691" alt="Scroll down" />
+	</div>
+</div><div id="Menu5n7Items" class="Menu5_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n23">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="../PPReport/prapatra-4.aspx">Prapatr-4</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n24">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="../PPReport/MauzaSelect.aspx?repNo=5">Prapatr-5</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n25">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="p6oldkhatakhesra_dtl.aspx">Prapatra-6 Old khata Khesra Update in Report</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n26">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="../PPReport/Prapatra-6-MissingReport.aspx">P6 Missing Plot Detail</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n27">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="../PPReport/Prapatra-6-MissingPhysicallyer.aspx">Prapatra-6 physical layer Check</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu5n28">
+			<td><table class="Menu5_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="Menu5_1 Menu5_3" href="../PPReport/p6reportwith_range.aspx">P6 Report Print Khesra Wise</a></td>
+				</tr>
+			</table></td>
+		</tr><tr style="height:1px;">
+			<td></td>
+		</tr>
+	</table><div class="Menu5_4 Menu5_0" id="Menu5n7ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/bsap/WebResource.axd?d=5IIDk2H212LyY3mp8WuYKIjVTf4oOuFfwo2gPdujs5HAifeoPDycfbaAontTBwpEx5bYS-gCDk8FKigcUx4LNgk0O9dZEQ_KijEWvGuE8mc1&amp;t=638470325903148691" alt="Scroll up" />
+	</div><div class="Menu5_4 Menu5_0" id="Menu5n7ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/bsap/WebResource.axd?d=juJ-avVUOxNGWvdNWAALjjrXIkHWdD1eVgHpAbE3p3UrWOiJds390z9iqbk2UUiJ6BkWtwWz4sPeNRnzLFrANQZnL-CVEX34hPw6oYJNxsE1&amp;t=638470325903148691" alt="Scroll down" />
+	</div>
+</div><a id="Menu5_SkipLink"></a>
+                 </li>
+                
+               
+                  
+                
+                        
+                        </ul>
+                     
+                      <ul class="nav navbar-nav main-navbar-nav navbar-right">
+                      <li  class="divider"><i class="fa fa-user" aria-hidden="true" style="font-size:20px;color:black;">&nbsp;</i><span id="LabelUser" style="font-weight:bold;">AKASH KUMAR</span> </li>
+                              &nbsp;
+                               <li  class="divider"><i class="fa fa-map-marker" style="font-size:20px;color:black;">&nbsp;</i><span id="LabelDist" style="font-weight:bold;">Rohtas</span> </li>
+                      
+                      
+                        <li class="divider"><i class="fa fa-sign-out" aria-hidden="true" style="color:black;"></i></li>
+                <li class="active">
+                     <a href="#Menu4_SkipLink"><img alt="Skip Navigation Links" src="/bsap/WebResource.axd?d=_rZtkJm3Sx8S07X3D9VEf6esDwbhJXX8zqdmj8n4JkyyrxS4ieE3uxIFVUx5SNoNR1BXxvg9gdrKKQ7XBrWav44mM4c7Ktzt-Tl1Fy_VfJ01&amp;t=638470325903148691" width="0" height="0" style="border-width:0px;" /></a><table id="Menu4" class="Menu4_2" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="Menu4n0"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="Menu4_1" href="../Signouts.aspx">Signout</a></td>
+			</tr>
+		</table></td>
+	</tr>
+</table><a id="Menu4_SkipLink"></a>
+                 </li>
+                       </ul>
+                                             
+                </div><!-- /.navbar-collapse -->                
+				<!-- END MAIN NAVIGATION -->
+			</div>
+ 
+             
+		</nav>        
+    </header>
+
+    <div class="container-fluid">
+        
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ToolkitScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="container"> 
+         <div class="row">
+            <div class="col-lg-12" style="text-align:center; background: #00283a;">
+                <h4 class="form-signin-heading" style="margin-left:-0px; color: #ffffff;  background: #00283a; text-align:center;" >अमीन डायरी  </h4>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-sm-12">
+                <div style="margin-top: 2.5%">
+                    <div class="container">
+                        <div id="ContentPlaceHolder1_OnlinePosting1" style="width:100%;">
+	
+                            <fieldset style="width: 95%; margin: -5px  22px; margin-top: 0px; background: #fff !important;
+                            -webkit-box-shadow: 0px 3px 38px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px 3px 38px 0px rgba(0,0,0,0.75);
+                            box-shadow: 0px 3px 38px 0px rgba(0,0,0,0.75);">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div id="ContentPlaceHolder1_Panel1">
+		
+                                        <table class="table table-bordered table-responsive"  align="center" cellpadding="0">
+                                            <tr>
+                                                <td valign="top" align="right">
+                                                    ज़िला :<span style="color: Red"> *</span>
+                                                </td>
+                                                <td valign="top" align="left" class="style1">
+                                                    <select name="ctl00$ContentPlaceHolder1$DropDownListdist" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownListdist\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownListdist" class="inp-form" style="width:150px;">
+			<option value="0">--Select--</option>
+			<option selected="selected" value="32">ROHTAS</option>
+
+		</select>
+                                                     <span id="ContentPlaceHolder1_RequiredFieldValidator3" style="color:#CC0000;display:none;">ज़िला भरें !</span>
+                                            
+                                                </td>
+                                                <td valign="top" align="right" class="style2">
+                                                    अंचल :<span style="color: Red"> *</span>
+                                                </td>
+                                                <td valign="top" align="left">
+                                                    <select name="ctl00$ContentPlaceHolder1$DropDownListcircle" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownListcircle\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownListcircle" class="inp-form" style="width:150px;">
+			<option value="0">--Select--</option>
+			<option selected="selected" value="8">Akorhi Gola</option>
+
+		</select>
+                                                    <span id="ContentPlaceHolder1_RequiredFieldValidator6" style="color:#CC0000;display:none;">अंचल भरें !</span>
+                                            
+                                                </td>
+                                                <td valign="top" align="right">
+                                                    शिविर :<span style="color: Red"> *</span>
+                                                </td>
+                                                <td valign="top" align="left">
+                                                    <select name="ctl00$ContentPlaceHolder1$DropDownListshivir" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownListshivir\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownListshivir" class="inp-form" style="width:150px;">
+			<option value="0">--Select--</option>
+			<option selected="selected" value="736">AKORHI GOLA 01</option>
+
+		</select>
+                                                    <span id="ContentPlaceHolder1_RequiredFieldValidator1" style="color:#CC0000;display:none;">मौजा भरें !</span>
+                                            
+                                                </td>
+                                                <td valign="top" align="right">
+                                                    मौजा  :<span style="color: Red"> *</span>
+                                                </td>
+                                                <td valign="top" align="left">
+                                                    <select name="ctl00$ContentPlaceHolder1$DropDownListmauza" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownListmauza\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownListmauza" class="inp-form" style="width:150px;">
+			<option value="0">--Select--</option>
+			<option value="1158">Akorhi</option>
+			<option selected="selected" value="1180">Biseni Kalan</option>
+			<option value="1167">Gobardhanpur</option>
+			<option value="1177">Karmahi</option>
+			<option value="1183">Niman</option>
+
+		</select>
+                                                    <span id="ContentPlaceHolder1_RequiredFieldValidator7" style="color:#CC0000;display:none;">मौजा भरें !</span>
+                                                </td>
+                                                <td valign="top" align="right">
+                                                    थाना नं० :<span style="color: Red"> *</span>
+                                                </td>
+                                                <td valign="top" align="left">
+                                                    <input name="ctl00$ContentPlaceHolder1$txtthana" type="text" readonly="readonly" id="ContentPlaceHolder1_txtthana" class="inp-form" style="height:18px;width:79px;" />
+                                                    <span id="ContentPlaceHolder1_RequiredFieldValidator5" style="color:#CC0000;display:none;">*</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    दिनांक <span style="color: Red"> *</span>
+                                                </td>
+                                                <td  colspan="2">
+                                                    <input name="ctl00$ContentPlaceHolder1$txtDate" type="text" value="16-01-2025" maxlength="10" readonly="readonly" id="ContentPlaceHolder1_txtDate" Calendar="ContentPlaceHolder1_PopCalendar6" Format="dd-mm-yyyy" dir="ltr" autocomplete="off" onfocus="__PopCalSetFocus(this, event);" />
+                                                    <span id='ContentPlaceHolder1_PopCalendar6_Control' onclick='__PopCalShowCalendar("ContentPlaceHolder1_txtDate",this)' style='cursor:pointer;'><img src='/bsap/bs/PopCalendar2005/Calendar.gif' border='0' align='absmiddle' /></span><link type='text/css' rel='stylesheet' href='/bsap/bs/PopCalendar2005/CSS/Classic.css' /><script type='text/javascript'>var ContentPlaceHolder1_PopCalendar6=PopCalendar.newCalendar('ContentPlaceHolder1_PopCalendar6');ContentPlaceHolder1_PopCalendar6.imgDir='/bsap/bs/PopCalendar2005/CSS/Classic_Images/';ContentPlaceHolder1_PopCalendar6.CssClass='ClassicStyle';ContentPlaceHolder1_PopCalendar6.startAt=1;ContentPlaceHolder1_PopCalendar6.todayString='16 January 2025';ContentPlaceHolder1_PopCalendar6.selectDateMessage='[Date]';ContentPlaceHolder1_PopCalendar6.centuryLimit=40;ContentPlaceHolder1_PopCalendar6.forcedToday('2025-01-16','yyyy-mm-dd');ContentPlaceHolder1_PopCalendar6.dayName=PopCal_enGB_DaysShort;ContentPlaceHolder1_PopCalendar6.monthName=PopCal_enGB_MonthsFull;ContentPlaceHolder1_PopCalendar6.monthNameShort=PopCal_enGB_MonthsShort;ContentPlaceHolder1_PopCalendar6.initCalendar();__PopCalAddCalendarRange('ContentPlaceHolder1_txtDate','Hoy',0,'','Hoy',0,'');</script><link type='text/css' rel='stylesheet' href='/bsap/bs/PopCalendar2005/CSS/Classic.css' />
+                                                </td>
+                                                <td colspan="2">
+                                                    किये गए कार्य के विवरण भरने के लिए सेलेक्ट करें <span style="color: Red"> *</span>
+                                                </td>
+                                                <td>
+                                                    <select name="ctl00$ContentPlaceHolder1$DropDownList1" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownList1\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownList1" class="inp-form">
+			<option selected="selected" value="0">खतियानी विवरणी(प्रपत्र-5)</option>
+			<option value="1">पब्लिक अवेयरनेस</option>
+			<option value="2">ग्राम सभा</option>
+			<option value="3">वंशावली सत्यापन</option>
+			<option value="4">तीन सीमाना सत्यापन </option>
+			<option value="5">ग्राम सीमा सत्यापन</option>
+			<option value="6">किस्तवार</option>
+			<option value="7">खानापुरी</option>
+			<option value="8">प्रपत्र-6 एंट्री </option>
+			<option value="9">दावा आपत्ति से संबंधित कार्य</option>
+			<option value="10">विवादों के संबंध में नापी</option>
+			<option value="11">दावा आपत्ति का संकलन</option>
+			<option value="12">आदेश का तरमीम</option>
+			<option value="13">अन्य</option>
+
+		</select>
+                                                </td>
+                                                <td>Year </td>
+                                                 <td>
+                                                      <input name="ctl00$ContentPlaceHolder1$txtyear" type="text" value="2025" readonly="readonly" id="ContentPlaceHolder1_txtyear" class="inp-form" style="height:18px;width:79px;" />
+                                                 </td>
+                                                 <td>Month </td>
+                                                 <td>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtmonth" type="text" value="1" readonly="readonly" id="ContentPlaceHolder1_txtmonth" class="inp-form" style="height:18px;width:79px;" /><br />
+                                                    <input name="ctl00$ContentPlaceHolder1$txtday" type="text" value="day_9" readonly="readonly" id="ContentPlaceHolder1_txtday" class="inp-form" style="height:18px;width:79px;" />
+                                                 </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="5">
+                                                    <input id="ContentPlaceHolder1_CheckBox1" type="checkbox" name="ctl00$ContentPlaceHolder1$CheckBox1" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$CheckBox1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_CheckBox1">Date 09-06-2022 की एंट्री के लिए यहाँ चेक करें</label>
+                                                    &nbsp;&nbsp;
+                                                    <input name="ctl00$ContentPlaceHolder1$TextBox1" type="text" value="09-06-2022" readonly="readonly" id="ContentPlaceHolder1_TextBox1" />
+                                                </td>
+                                                <td colspan="5">
+                                                    <input id="ContentPlaceHolder1_CheckBox2" type="checkbox" name="ctl00$ContentPlaceHolder1$CheckBox2" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$CheckBox2\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_CheckBox2">Date 11-06-2022 की एंट्री के लिए यहाँ चेक करें</label>
+                                                    &nbsp;&nbsp;
+                                                    <input name="ctl00$ContentPlaceHolder1$TextBox2" type="text" value="11-06-2022" readonly="readonly" id="ContentPlaceHolder1_TextBox2" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+	</div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div id="ContentPlaceHolder1_Panel12">
+		
+                                        <table class="table table-bordered table-responsive"  align="center" cellpadding="0">
+                                            <tr>
+                                                <td valign="top" align="center" colspan="4">
+                                                     <div class="row">
+                                                        <div class="col-lg-12" style="text-align:center; background: #00283a;">
+                                                            <h4 class="form-signin-heading" style="margin-left:-0px; color: #ffffff;  background: #00283a; text-align:center;" >दावा आपत्ति से संबंधित कार्य</h4>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                     <br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                 <td>
+                                                   दावा आपत्ति से संबंधित कार्य
+                                                </td>
+                                                <td>
+                                                    <textarea name="ctl00$ContentPlaceHolder1$txtdabaaapti" rows="2" cols="20" id="ContentPlaceHolder1_txtdabaaapti" style="width:500px;">
+</textarea>
+                                                </td>
+                                                <td>
+                                                   कुल दावों की संख्या
+                                                </td>
+                                                <td>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtdabaaaptitotal" type="text" id="ContentPlaceHolder1_txtdabaaaptitotal" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+	</div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div id="ContentPlaceHolder1_Panel19">
+		
+                                         <table class="table table-bordered table-responsive"  align="center" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnsave" value="Save" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnsave&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnsave" style="background-color:#FF9900;width:73px;" /></td>
+                                            </tr>
+                                         </table>
+                                    
+	</div>
+                                </div>
+                            </div>
+                                
+                        </fieldset>
+                        
+</div>
+
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    </div>
+    <br />
+    <div style="background: #00283a; margin-top:5%;">
+        <div class="container-fluid" id="copyright" style="background: #FF7723;">
+            <p class="center-block"> Copyright@2024 DLRS.</p>
+        </div>
+     </div>
+        
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ContentPlaceHolder1_RequiredFieldValidator3"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator6"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator1"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator7"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator5"), document.getElementById("ContentPlaceHolder1_PopCalendar6_MessageError"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolder1_RequiredFieldValidator3 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator3"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator3");
+ContentPlaceHolder1_RequiredFieldValidator3.controltovalidate = "ContentPlaceHolder1_DropDownListdist";
+ContentPlaceHolder1_RequiredFieldValidator3.focusOnError = "t";
+ContentPlaceHolder1_RequiredFieldValidator3.errormessage = "ज़िला भरें !";
+ContentPlaceHolder1_RequiredFieldValidator3.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator3.validationGroup = "SaveValid";
+ContentPlaceHolder1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator3.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator6 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator6"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator6");
+ContentPlaceHolder1_RequiredFieldValidator6.controltovalidate = "ContentPlaceHolder1_DropDownListdist";
+ContentPlaceHolder1_RequiredFieldValidator6.focusOnError = "t";
+ContentPlaceHolder1_RequiredFieldValidator6.errormessage = "अंचल भरें !";
+ContentPlaceHolder1_RequiredFieldValidator6.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator6.validationGroup = "SaveValid";
+ContentPlaceHolder1_RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator6.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator1 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator1"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator1");
+ContentPlaceHolder1_RequiredFieldValidator1.controltovalidate = "ContentPlaceHolder1_DropDownListdist";
+ContentPlaceHolder1_RequiredFieldValidator1.focusOnError = "t";
+ContentPlaceHolder1_RequiredFieldValidator1.errormessage = "मौजा भरें !";
+ContentPlaceHolder1_RequiredFieldValidator1.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator1.validationGroup = "SaveValid";
+ContentPlaceHolder1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator1.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator7 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator7"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator7");
+ContentPlaceHolder1_RequiredFieldValidator7.controltovalidate = "ContentPlaceHolder1_DropDownListdist";
+ContentPlaceHolder1_RequiredFieldValidator7.focusOnError = "t";
+ContentPlaceHolder1_RequiredFieldValidator7.errormessage = "मौजा भरें !";
+ContentPlaceHolder1_RequiredFieldValidator7.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator7.validationGroup = "SaveValid";
+ContentPlaceHolder1_RequiredFieldValidator7.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator7.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator5 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator5"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator5");
+ContentPlaceHolder1_RequiredFieldValidator5.controltovalidate = "ContentPlaceHolder1_txtthana";
+ContentPlaceHolder1_RequiredFieldValidator5.focusOnError = "t";
+ContentPlaceHolder1_RequiredFieldValidator5.errormessage = "*";
+ContentPlaceHolder1_RequiredFieldValidator5.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator5.validationGroup = "SaveValid";
+ContentPlaceHolder1_RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator5.initialvalue = "";
+var ContentPlaceHolder1_PopCalendar6_MessageError = document.all ? document.all["ContentPlaceHolder1_PopCalendar6_MessageError"] : document.getElementById("ContentPlaceHolder1_PopCalendar6_MessageError");
+ContentPlaceHolder1_PopCalendar6_MessageError.controltovalidate = "ContentPlaceHolder1_txtDate";
+ContentPlaceHolder1_PopCalendar6_MessageError.errormessage = "";
+ContentPlaceHolder1_PopCalendar6_MessageError.display = "Dynamic";
+ContentPlaceHolder1_PopCalendar6_MessageError.evaluationfunction = "__PopCalCustomValidatorEvaluateIsValid";
+ContentPlaceHolder1_PopCalendar6_MessageError.clientvalidationfunction = "__PopCalValidateOnSubmit";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get('ContentPlaceHolder1_ToolkitScriptManager1_HiddenField').value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();alert('Amin Dairy Save Successfully.');var Menu5_Data = new Object();
+Menu5_Data.disappearAfter = 500;
+Menu5_Data.horizontalOffset = 0;
+Menu5_Data.verticalOffset = 0;
+Menu5_Data.hoverClass = 'Menu5_6';
+Menu5_Data.hoverHyperLinkClass = 'Menu5_5';
+Menu5_Data.iframeUrl = '/bsap/WebResource.axd?d=i_dJry3ADkvSIWm4dGGJPxg1wpWgxKijPvxhQAyW6aVk-3G3pLuxnt8dRYWj-7PAj03eqWDAYeDSXa15Y-JasLLirb0Pl_YuE5aaJxCK0v3fQ1&t=638470325903148691';
+var Menu4_Data = new Object();
+Menu4_Data.disappearAfter = 500;
+Menu4_Data.horizontalOffset = 0;
+Menu4_Data.verticalOffset = 0;
+Menu4_Data.hoverClass = 'Menu4_6';
+Menu4_Data.hoverHyperLinkClass = 'Menu4_5';
+Menu4_Data.iframeUrl = '/bsap/WebResource.axd?d=i_dJry3ADkvSIWm4dGGJPxg1wpWgxKijPvxhQAyW6aVk-3G3pLuxnt8dRYWj-7PAj03eqWDAYeDSXa15Y-JasLLirb0Pl_YuE5JxCK0v3fQ1&t=638470325903148691';
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+
+<script type='text/javascript'><!--
+if((typeof(PopCalendar)=='undefined')||(PopCalendar.majorVersion==null)||(PopCalendar.minorVersion==null))
+    alert('Unable to find script library "/bsap/bs/PopCalendar2005/PopCalendar.js".\n\nTry placing this file manually');
+else if((PopCalendar.majorVersion<8)||((PopCalendar.majorVersion=8)&&(PopCalendar.minorVersion<1)))
+    alert('This page uses an incorrect version of PopCalendar.js.\n\nThe page expects version 8.1 or greater. The script library is ' + PopCalendar.majorVersion + '.' + PopCalendar.minorVersion + '.');
+else if((typeof(PopCalendarFunctions)=='undefined')||(PopCalendarFunctions.majorVersion==null)||(PopCalendarFunctions.minorVersion==null))
+    alert('Unable to find script library "/bsap/bs/PopCalendar2005/PopCalendarFunctions.js".\n\nTry placing this file manually');
+else if((PopCalendarFunctions.majorVersion<8)||((PopCalendarFunctions.majorVersion=8)&&(PopCalendarFunctions.minorVersion<1.2)))
+    alert('This page uses an incorrect version of PopCalendarFunctions.js.\n\nThe page expects version 8.1.2 or greater. The script library is ' + PopCalendarFunctions.majorVersion + '.' + PopCalendarFunctions.minorVersion + '.');
+// --></script>
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('ContentPlaceHolder1_DropDownList1');
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator3'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator6').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator6'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator1'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator7').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator7'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator5').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator5'));
+}
+
+document.getElementById('ContentPlaceHolder1_PopCalendar6_MessageError').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_PopCalendar6_MessageError'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>

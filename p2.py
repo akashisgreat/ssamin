@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
+
+
+
 mauja_id = [
 1154,
 1156,
@@ -129,5 +132,12 @@ for x in mauja_id:
 
 print("---- Mauja Count: ", len(all_p2), " ---")
 print("Total P2: ", sum(all_p2))
+print("")
 
-input("Press any key to exit.)
+
+for element in all_p2:
+    print(element)
+
+
+print("")
+input("Press any key to exit.")
